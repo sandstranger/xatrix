@@ -130,10 +130,5 @@ set(Xatrix-Header
 	)
 
 # Build the xatrix dynamic library
-add_library(game SHARED ${Xatrix-Source} ${Xatrix-Header})
-set_target_properties(game PROPERTIES
-	PREFIX ""
-	LIBRARY_OUTPUT_DIRECTORY_DEBUG ${CMAKE_BINARY_DIR}/Debug
-	LIBRARY_OUTPUT_DIRECTORY_RELEASE ${CMAKE_BINARY_DIR}/Release
-)
-target_link_libraries(game ${XatrixLinkerFlags})
+add_library(xatrix SHARED ${Xatrix-Source} ${Xatrix-Header})
+target_link_libraries(xatrix ${XatrixLinkerFlags})
